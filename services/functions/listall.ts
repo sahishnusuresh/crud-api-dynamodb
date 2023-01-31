@@ -6,12 +6,11 @@ const dynamodb= new DynamoDB.DocumentClient()
 export const handler:APIGatewayProxyHandlerV2=async(event)=>{
     const params={
         TableName:Table.hello.tableName,
-        const user_ids:["1","2"],
+        // const user_ids:["1","2"],
         KeyConditionExpression:"userId=:userId",
-        FilterExpression:"userId in (:userId1,:userId2)",
+        // FilterExpression:"userId in (:userId1,:userId2)",
         ExpressionAttributeValues:{
-            ":userId1":"1",
-            ":userId2":"2"
+            ":userId":"1",
         }
 
     }
